@@ -170,6 +170,11 @@ namespace Homework3
             myCanvas.Children.Clear();  // 清除所有形狀
             DisplayStatus();  // 更新狀態信息
         }
+        private void NewCanvasMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow newWindow = new MainWindow();
+            newWindow.Show();
+        }
 
         // 當用戶釋放畫布上的左鍵時觸發此事件
         private void myCanvas_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -210,6 +215,7 @@ namespace Homework3
                         var ellipse = myCanvas.Children.OfType<Ellipse>().LastOrDefault();
                         // 設定橢圓的描邊顏色
                         ellipse.Stroke = new SolidColorBrush(strokeColor);
+                        ellipse.Fill = new SolidColorBrush(fillColor);
                         // 設定橢圓的游標
                         myCanvas.Cursor = Cursors.Arrow;  // 將鼠標指針更改為箭頭
                         break;

@@ -6,11 +6,11 @@
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:local="clr-namespace:Homewoek3"
         mc:Ignorable="d"
-        Title="2023 WPF Painter" Height="600" Width="960">
+        Title="2023 WPF Painter" Height="800" Width="960">
     <DockPanel LastChildFill="False">
         <Menu DockPanel.Dock="Top" Height="25">
             <MenuItem Header="檔案" VerticalAlignment="Center">
-                <MenuItem Header="新畫布"/>
+                <MenuItem Header="新畫布" Click="NewCanvasMenuItem_Click"/>
             </MenuItem>
             <MenuItem Header="工具">
                 <MenuItem Header="清除畫布" x:Name="clearMenuItem" Click="clearMenuItem_Click"/>
@@ -31,11 +31,11 @@
                 <RadioButton Content="橢圓" FontSize="14" Width="60" VerticalAlignment="Center" Click="ShapeButton_Click" Tag="Ellipse"/>
             </ToolBar>
         </ToolBarTray>
-        <Canvas x:Name="myCanvas" DockPanel.Dock="Top" Height="473" Background="#FFF7F4EA" MouseLeftButtonDown="myCanvas_MouseLeftButtonDown" MouseMove="myCanvas_MouseMove" MouseLeftButtonUp="myCanvas_MouseLeftButtonUp"/>
-        <StatusBar x:Name="myStatusBar" DockPanel.Dock="Bottom" Background="#FFC4C0C0" Height="30">
+        <Canvas x:Name="myCanvas" DockPanel.Dock="Top" Height="672" Background="#FFF7F4EA" MouseLeftButtonDown="myCanvas_MouseLeftButtonDown" MouseMove="myCanvas_MouseMove" MouseLeftButtonUp="myCanvas_MouseLeftButtonUp"/>
+        <StatusBar x:Name="myStatusBar" DockPanel.Dock="Bottom" Background="#FFC4C0C0" Height="50">
             <StackPanel Orientation="Horizontal" Margin="50,0,0,0">
-                <Label x:Name="coordinateLabel" Width="250" Height="25" VerticalAlignment="Center"/>
-                <Label x:Name="shapeLabel" Width="200" Height="25" VerticalAlignment="Center"/>
+                <Label x:Name="coordinateLabel" Width="250" Height="45" VerticalAlignment="Center"/>
+                <Label x:Name="shapeLabel" Width="200" Height="45" VerticalAlignment="Center"/>
             </StackPanel>
         </StatusBar>
     </DockPanel>
